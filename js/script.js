@@ -21,10 +21,11 @@ let alumnos =
         mail:"jimmy@gmail.com"
     }
 ];
+let respuesta = "";
 let container = document.querySelector(".container");
 for(alumno in alumnos){
     let datos = alumnos[alumno];
-    respuesta = `
+    respuesta += `
     <div class="card">
             <div class="card-item">
                 ${datos['nombre']}
@@ -43,8 +44,8 @@ for(alumno in alumnos){
             </div>
         </div>
     `
-    container.innerHTML+=respuesta;
 } 
+container.innerHTML+=respuesta;
 const button = document.querySelector(".button-selector");
 let elementos = document.querySelectorAll(".card-calification");
 let calificacion = document.querySelectorAll(".calificacion");
